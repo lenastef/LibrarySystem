@@ -1,4 +1,6 @@
-public class Book {
+package LibrarySystem;
+
+public class Author {
     public static void main(String[] args) {
 
     }
