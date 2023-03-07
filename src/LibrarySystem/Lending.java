@@ -13,7 +13,7 @@ public class Lending {
     }
 
     public String getDuedate() {
-        return LocalDate.now().toString();
+        return duedate.toString();
     }
 
     public void setDuedate(String duedate) {
