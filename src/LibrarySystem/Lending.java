@@ -5,7 +5,8 @@ import java.time.LocalDate;
 public class Lending {
 
     private LocalDate duedate;
-
+    private User user;
+    private Book book;
 
     public Lending(Book book, User user) {
         this.duedate = LocalDate.now();
