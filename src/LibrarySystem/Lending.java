@@ -1,18 +1,38 @@
 package LibrarySystem;
 
-public class Lending {
-    public static void main(String[] args) {
-        public Lending(Book book, User user); {
-            public localDateTime getDueDate (); {
-                public void setDueDate (LocalDate dueDate);
-                public Book getBook (); {
-                    public setBook(Book book);
-                    public User getUser (); {
-                        public setUser(User user);
-                    }
-                }
+import java.time.LocalDate;
 
-            }
-        }
+public class Lending {
+
+    private LocalDate duedate;
+
+
+    public Lending(Book book, User user) {
+        this.duedate = LocalDate.now();
+    }
+
+    public String getDuedate() {
+        return LocalDate.now().toString();
+    }
+
+    public void setDuedate(String duedate) {
+        this.duedate = LocalDate.parse(duedate);
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
+

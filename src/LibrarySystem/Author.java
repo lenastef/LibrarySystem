@@ -1,11 +1,10 @@
 package LibrarySystem;
 
-public class Author extends Book {
+public class Author {
 
     private String name;
 
-    public Author(String title, String name) {
-        super(title, authors);
+    public Author(String name) {
         this.name = name;
     }
 
