@@ -5,14 +5,15 @@ import java.time.LocalDate;
 public class Lending {
 
     private LocalDate duedate;
-
+    private User user;
+    private Book book;
 
     public Lending(Book book, User user) {
         this.duedate = LocalDate.now();
     }
 
     public String getDuedate() {
-        return LocalDate.now().toString();
+        return duedate.toString();
     }
 
     public void setDuedate(String duedate) {
