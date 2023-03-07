@@ -4,8 +4,8 @@ public class Author extends Book {
 
     private String name;
 
-    public Author(String name) {
-        super();
+    public Author(String title, String name) {
+        super(title, authors);
         this.name = name;
     }
 
