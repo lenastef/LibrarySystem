@@ -45,7 +45,5 @@ public class LibrarySystem {
     public void returnBook(User user, Book book) {
 
     }
-
-    public void UserOrBookDoesNotExistException(String message) {
-    }
+    
 }
