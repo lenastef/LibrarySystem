@@ -4,7 +4,7 @@ public class FacultyMember extends User {
     public String name;
     public String department;
 
-    public FacultyMember(String name) {
+    public FacultyMember(String name, String department) {
         super(name);
     }
 

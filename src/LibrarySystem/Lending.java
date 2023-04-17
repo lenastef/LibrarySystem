@@ -4,20 +4,27 @@ import java.time.LocalDate;
 
 public class Lending {
 
-    private LocalDate duedate;
+    private LocalDate dueDate;
     private User user;
     private Book book;
 
-    public Lending(Book book, User user) {
-        this.duedate = LocalDate.now();
+    public Lending(Book book, User user, LocalDate dueDate) {
+        this.book = book;
+        this.user = user;
+        this.dueDate = dueDate;
     }
 
-    public String getDuedate() {
-        return duedate.toString();
+    public Lending(User user, Book book) {
+        this.user = user;
+        this.book = book;
     }
 
-    public void setDuedate(String duedate) {
-        this.duedate = LocalDate.parse(duedate);
+    public LocalDate getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
     }
 
     public Book getBook() {
@@ -35,5 +42,9 @@ public class Lending {
     public void setUser(User user) {
         this.user = user;
     }
-}
 
+    public User getBorrower() {
+        return user;
+    }
+
+}
