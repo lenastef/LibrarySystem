@@ -1,4 +1,4 @@
-package LibrarySystem;
+package main.java.LibrarySystem;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class LibrarySystemUI {
 
-    private static final LibrarySystem librarySystem = new LibrarySystem();
+    private static final LibrarySystem.LibrarySystem librarySystem = new LibrarySystem.LibrarySystem();
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -49,7 +49,7 @@ public class LibrarySystemUI {
                     LocalDate newDueDate = LocalDate.parse(scanner.nextLine());
 
                     // Find the student and book objects using the library system
-                    Student student = (Student) librarySystem.findUserByName(studentName);
+                    LibrarySystem.Student student = (LibrarySystem.Student) librarySystem.findUserByName(studentName);
                     Book book = librarySystem.findBookByTitle(bookTitle);
 
                     // Call the extendLending() method with the required parameters
@@ -63,7 +63,7 @@ public class LibrarySystemUI {
                     bookTitle = scanner.nextLine();
 
                     // Find the user and book objects using the library system
-                    User user = librarySystem.findUserByName(userName);
+                    LibrarySystem.User user = librarySystem.findUserByName(userName);
                     book = librarySystem.findBookByTitle(bookTitle);
 
                     // Call the returnBook() method with the required parameters
@@ -87,11 +87,11 @@ public class LibrarySystemUI {
         int numAuthors = scanner.nextInt();
         scanner.nextLine(); // consume the newline character
 
-        List<Author> authors = new ArrayList<>();
+        List<LibrarySystem.Author> authors = new ArrayList<>();
         for (int i = 0; i < numAuthors; i++) {
             System.out.println("Enter author " + (i + 1) + "'s name:");
             String authorName = scanner.nextLine();
-            authors.add(new Author(authorName));
+            authors.add(new LibrarySystem.Author(authorName));
         }
 
         librarySystem.addBookWithTitleAndAuthorlist(title, authors);
@@ -123,7 +123,7 @@ public class LibrarySystemUI {
     private static void borrowBook() {
         System.out.println("\nEnter the borrower's name:");
         String borrowerName = scanner.nextLine();
-        User borrower = librarySystem.findUserByName(borrowerName);
+        LibrarySystem.User borrower = librarySystem.findUserByName(borrowerName);
 
         if (borrower == null) {
             System.out.println("User not found. Please try again.");

@@ -1,13 +1,32 @@
 # LibrarySystem
 
-Function: The system is divided into administrator interface and user interface
+A simple library system that allows users to borrow and return books.
 
-Administrator: Realize adding, deleting, modifying and checking books, searching all borrowing history and all account
-information, user authority and management, setting passwords, borrowing books and modifying the data of one's own
-account
+## Installation
 
-User: Realize the function of borrowing books, check your own borrowing history, realize the functions of changing
-password and modifying personal information in user account
+To use this library system, you need to have Java installed on your computer.
+
+1. Clone this repository to your local machine.
+2. Open the project in an IDE or text editor of your choice.
+3. Compile and run the LibrarySystem.java file.
+
+## Usage
+
+To borrow a book:
+
+1. Enter the name of the user and the title of the book.
+2. Click the "Borrow" button.
+3. If the book is available and the user is eligible to borrow, the book will be checked out to the user.
+
+To return a book:
+
+1. Enter the name of the user and the title of the book.
+2. Click the "Return" button.
+3. If the user has the book checked out, the book will be returned and marked as available.
+
+## Dependencies
+
+This project uses the Java 8 standard library and does not require any external dependencies.
 
 Both the implementation and the tests are in Java package `HBV/LibrarySystem/src`,
 but in the usual separate Maven `src` directories:

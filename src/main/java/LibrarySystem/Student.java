@@ -1,6 +1,6 @@
-package LibrarySystem;
+package main.java.LibrarySystem;
 
-public class Student extends User {
+public class Student extends LibrarySystem.User {
     private boolean feePaid;
 
     public boolean isFeePaid() {

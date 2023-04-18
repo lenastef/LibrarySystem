@@ -1,29 +1,30 @@
-package LibrarySystem;
+package main.java.LibrarySystem;
 
 import java.util.List;
 
+
 public class Book {
     private String title;
-    private List<Author> authors;
+    private List<LibrarySystem.Author> authors;
     private int numAvailableCopies;
     Book newBook = new Book(title, authors, numAvailableCopies);
 
 
-    public Book(String title, List<Author> authors, int numAvailableCopies) {
+    public Book(String title, List<LibrarySystem.Author> authors, int numAvailableCopies) {
         this.title = title;
         this.authors = authors;
         this.numAvailableCopies = numAvailableCopies;
     }
 
-    public void addAuthor(Author author) {
+    public void addAuthor(LibrarySystem.Author author) {
         this.authors.add(author);
     }
 
-    public List<Author> getAuthors() {
+    public List<LibrarySystem.Author> getAuthors() {
         return authors;
     }
 
-    public void setAuthors(List<Author> authors) {
+    public void setAuthors(List<LibrarySystem.Author> authors) {
         this.authors = authors;
     }
 
